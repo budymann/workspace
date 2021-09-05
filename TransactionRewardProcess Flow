@@ -1,0 +1,59 @@
+<mxfile host="app.diagrams.net" modified="2021-09-05T05:39:33.387Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36" etag="RWkr-oUWzTuYR7uQjvPX" version="15.0.6" type="github">
+  <diagram id="eCJY-mPUXYFY67C5Tz0N" name="Page-1">
+    <mxGraphModel dx="1415" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="N7KVop5LQl5USagWA171-10" value="TransactionRewardProcessStarted/&lt;br&gt;Send CreateTransactionIdentifierToken" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="N7KVop5LQl5USagWA171-1" target="N7KVop5LQl5USagWA171-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N7KVop5LQl5USagWA171-1" value="Starting Transaction Reward Process" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N7KVop5LQl5USagWA171-2" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
+          <mxGeometry x="30" y="105" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="N7KVop5LQl5USagWA171-3" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="N7KVop5LQl5USagWA171-2" target="N7KVop5LQl5USagWA171-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="35" y="165" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N7KVop5LQl5USagWA171-4" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
+          <mxGeometry x="740" y="105" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="N7KVop5LQl5USagWA171-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="N7KVop5LQl5USagWA171-5" target="N7KVop5LQl5USagWA171-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N7KVop5LQl5USagWA171-5" value="No Reward Applicable" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="580" y="90" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N7KVop5LQl5USagWA171-15" value="TransactionIdentifierTokenCreated/&lt;br&gt;Send ObtainMerchantDetail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="N7KVop5LQl5USagWA171-9" target="N7KVop5LQl5USagWA171-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N7KVop5LQl5USagWA171-9" value="Creating Transaction Identifier Token" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N7KVop5LQl5USagWA171-18" value="Unable to obtain&lt;br&gt;Merchant Detail/&lt;br&gt;Send MerchantDetailNotFound" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="N7KVop5LQl5USagWA171-14" target="N7KVop5LQl5USagWA171-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N7KVop5LQl5USagWA171-24" value="MerchantDetailObtained/&lt;br&gt;Send ProcessTransactionReward" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="N7KVop5LQl5USagWA171-14" target="N7KVop5LQl5USagWA171-23" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N7KVop5LQl5USagWA171-14" value="Obtaining Merchant Detail" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N7KVop5LQl5USagWA171-27" value="TransactionRewardProcessed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="N7KVop5LQl5USagWA171-23" target="N7KVop5LQl5USagWA171-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N7KVop5LQl5USagWA171-23" value="Processing &lt;br&gt;Transaction Reward" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N7KVop5LQl5USagWA171-26" value="Transaction Reward Processed" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
