@@ -5,9 +5,12 @@ import com.budymann.container.tokenizeserviceapiweb.TokenResponse;
 import org.apache.el.parser.Token;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.retry.annotation.Backoff;
+import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -21,6 +24,8 @@ public class TokenizeService {
 
     public RestTemplate restTemplate = new RestTemplate();
 
+    @Retryable( value = Exception.class,
+            maxAttempts = 10, backoff = @Backoff(delay = 100))
     public TokenResponse getTokenize(TokenRequest tokenRequest) {
         System.out.println(Thread.currentThread().getName());
         var response = restTemplate.postForEntity(tokenizeServiceUrl, tokenRequest, TokenResponse.class);

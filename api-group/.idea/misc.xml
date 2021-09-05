@@ -12,7 +12,16 @@
         <option value="$PROJECT_DIR$/../augmenter-service/augmenter-service/pom.xml" />
         <option value="$PROJECT_DIR$/tokenize-service-api-web/pom.xml" />
         <option value="$PROJECT_DIR$/../augmenter-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../transaction-service/transaction-service/pom.xml" />
+        <option value="$PROJECT_DIR$/transaction-service-api/pom.xml" />
+        <option value="$PROJECT_DIR$/../transaction-service/pom.xml" />
+        <option value="$PROJECT_DIR$/augmenter-service-api/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../transaction-service/transaction-service/transaction-service-api/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />

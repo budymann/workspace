@@ -16,6 +16,10 @@ public class TokenizeController {
 
     @PostMapping()
     public ResponseEntity<TokenResponse> tokenize(@RequestBody TokenRequest tokenRequestDto){
+        if(tokenRequestDto.getAttributeName().equalsIgnoreCase("failme")){
+            throw new RuntimeException("Get out!");
+        }
+
         var token = tokenService.tokenize(tokenRequestDto.attributeName, tokenRequestDto.attributeValue);
         var tokenResponseDto =  TokenResponse.builder()
                 .attributeName(token.getAttributeName())

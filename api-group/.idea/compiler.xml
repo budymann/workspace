@@ -7,11 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="merchant-service" />
         <module name="merchant-service-api-web" />
+        <module name="augmenter-service-api" />
+        <module name="augmenter-service" />
+        <module name="merchant-service" />
+        <module name="transaction-service" />
         <module name="tokenize-service-api-web" />
         <module name="tokenize" />
-        <module name="augmenter-service" />
+        <module name="transaction-service-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -31,6 +34,8 @@
       <module name="merchant-service" options="-parameters" />
       <module name="merchant-service-api-web" options="-parameters" />
       <module name="tokenize" options="-parameters" />
+      <module name="transaction-service" options="-parameters" />
+      <module name="transaction-service-api" options="" />
     </option>
   </component>
 </project>

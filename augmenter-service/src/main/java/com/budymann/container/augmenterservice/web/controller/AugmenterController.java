@@ -21,9 +21,9 @@ public class AugmenterController {
 
     @RequestMapping(value="/single")
     @GetMapping
-    public TokenResponse tokenize(){
+    public TokenResponse tokenize() throws Exception {
         var tokenRequest = new TokenRequest();
-        tokenRequest.setAttributeName("Trx");
+        tokenRequest.setAttributeName("failme");
         tokenRequest.setAttributeValue(UUID.randomUUID().toString());
         var token = tokenizeService.getTokenize(tokenRequest);
         return token;
@@ -31,24 +31,29 @@ public class AugmenterController {
 
     @RequestMapping(value="/synchronous")
     @GetMapping
-    public List<TokenResponse> getTokenizeSynchronous(int amount){
-        var tokens = tokenizeService.getTokenizeSynchronous(getRandomTokenRequests(amount));
+    public List<TokenResponse> getTokenizeSynchronous(int amount) throws Exception {
+        var tokens = tokenizeService.getTokenizeSynchronous(getRandomTokenRequests(amount, true));
         return tokens;
     }
 
     @RequestMapping(value="/parallel")
     @GetMapping
     public List<TokenResponse> getTokenizeParallel(int amount){
-        var tokens = tokenizeService.getTokenizeParallel(getRandomTokenRequests(amount));
+        var tokens = tokenizeService.getTokenizeParallel(getRandomTokenRequests(amount, true));
         return tokens;
     }
 
 
-    private List<TokenRequest> getRandomTokenRequests(int amount){
+    private List<TokenRequest> getRandomTokenRequests(int amount, boolean shouldFail){
         var tokenRequests = new ArrayList<TokenRequest>();
         for(var i = 0; i < amount; i++) {
             tokenRequests.add(new TokenRequest("TransactionId", UUID.randomUUID().toString()));
         }
+
+        if(shouldFail){
+            tokenRequests.add(new TokenRequest("failme", UUID.randomUUID().toString()));
+        }
+
         return tokenRequests;
     }
 }

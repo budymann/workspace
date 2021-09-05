@@ -1,0 +1,3 @@
+com\budymann\container\transactionserviceapi\messaging\FinancialTransactionSerializer.class
+com\budymann\container\transactionserviceapi\messaging\FinancialTransactionDeserializer.class
+com\budymann\container\transactionserviceapi\FinancialTransaction.class
