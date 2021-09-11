@@ -93,26 +93,45 @@
 
 		<dependency>
 			<groupId>io.eventuate.tram.core</groupId>
-			<artifactId>eventuate-tram-consumer-common</artifactId>
-			<version>0.29.0.RELEASE</version>
+			<artifactId>eventuate-tram-spring-commands</artifactId>
+			<version>0.24.0.RELEASE</version>
 		</dependency>
-
+		<dependency>
+			<groupId>io.eventuate.tram.core</groupId>
+			<artifactId>eventuate-tram-spring-events</artifactId>
+			<version>0.24.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>io.eventuate.tram.core</groupId>
+			<artifactId>eventuate-tram-spring-jdbc-kafka</artifactId>
+			<version>0.24.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>io.eventuate.tram.core</groupId>
+			<artifactId>eventuate-tram-spring-messaging</artifactId>
+			<version>0.24.0.RELEASE</version>
+		</dependency>
 		<dependency>
 			<groupId>io.eventuate.tram.sagas</groupId>
-			<artifactId>eventuate-tram-sagas-orchestration-simple-dsl</artifactId>
-			<version>0.18.0.RELEASE</version>
+			<artifactId>eventuate-tram-sagas-spring-orchestration-simple-dsl</artifactId>
+			<version>0.13.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>io.eventuate.tram.sagas</groupId>
+			<artifactId>eventuate-tram-sagas-spring-participant</artifactId>
+			<version>0.13.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>io.eventuate.tram.sagas</groupId>
+			<artifactId>eventuate-tram-sagas-spring-testing-support</artifactId>
+			<version>0.13.0.RELEASE</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/io.eventuate.tram.core/eventuate-tram-aggregate-domain-events -->
 		<dependency>
 			<groupId>io.eventuate.tram.core</groupId>
 			<artifactId>eventuate-tram-aggregate-domain-events</artifactId>
-			<version>0.29.0.RELEASE</version>
-		</dependency>
-
-		<dependency>
-			<groupId>io.eventuate.tram.core</groupId>
-			<artifactId>eventuate-tram-spring-commands</artifactId>
-			<version>0.29.0.RELEASE</version>
+			<version>0.26.1.RELEASE</version>
 		</dependency>
 
 
@@ -133,6 +152,12 @@
 		<dependency>
 			<groupId>com.budymann.container</groupId>
 			<artifactId>augmenter-service-api</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.budymann.container</groupId>
+			<artifactId>transaction-service-api</artifactId>
 			<version>1.0-SNAPSHOT</version>
 			<scope>compile</scope>
 		</dependency>
@@ -159,6 +184,11 @@
 		</plugins>
 	</build>
 	<repositories>
+		<repository>
+			<id>jcenter</id>
+			<name>jcenter</name>
+			<url>https://jcenter.bintray.com/</url>
+		</repository>
 		<repository>
 			<snapshots>
 				<enabled>false</enabled>

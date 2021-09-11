@@ -1,16 +1,17 @@
-package com.budymann.container.transactionserviceapi;
+package com.budymann.container.augmenterserviceapi.events;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.util.UUID;
 
 @Getter
 @Setter
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class FinancialTransaction {
+public class TransactionRewardProcessDetails {
     private String transactionId;
     private String merchantName;
     private BigDecimal amount;

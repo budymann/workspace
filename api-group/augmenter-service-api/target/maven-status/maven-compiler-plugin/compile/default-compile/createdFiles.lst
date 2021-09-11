@@ -1,0 +1,5 @@
+com\budymann\container\augmenterserviceapi\events\TransactionRewardProcessStarted.class
+com\budymann\container\augmenterserviceapi\events\TransactionRewardProcessState.class
+com\budymann\container\augmenterserviceapi\TransactionRewardProcessChannels.class
+com\budymann\container\augmenterserviceapi\events\TransactionRewardProcessCompleted.class
+com\budymann\container\augmenterserviceapi\events\TransactionRewardProcessDomainEvent.class
